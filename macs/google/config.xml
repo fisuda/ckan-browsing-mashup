@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mashup xmlns="http://wirecloud.conwet.fi.upm.es/ns/macdescription/1" vendor="CoNWeT" name="CKAN Wirecloud Google View" version="1.0.1">
+  <details>
+    <email>conwet@conwet.com</email>
+    <description>Template for generating workspaces for Wirecloud View CKAN extension.</description>
+    <authors>admin</authors>
+  </details>
+  <preferences>
+    <preference name="graph_type" type="text" label="graph_type"/>
+    <preference name="graph_series" type="text" label="graph_series"/>
+    <preference name="graph_fields" type="text" label="graph_fields"/>
+    <preference name="resource" type="text" label="resource"/>
+    <preference name="ckan_server" type="text" label="ckan_server"/>
+  </preferences>
+  <structure>
+    <tab id="0" name="Tab">
+      <resource id="6" name="googlecharts" title="Google Charts" vendor="CoNWeT" version="1.0.6">
+        <position x="0" y="0" z="0"/>
+        <rendering height="36" width="10" layout="0" minimized="false" fulldragboard="false"/>
+      </resource>
+    </tab>
+    <wiring version="2.0">
+      <operator id="1" name="ckan-source" vendor="CoNWeT" version="0.4.3">
+        <preferencevalue name="ckan_server" value="%(params.ckan_server)" readonly="true"/>
+        <preferencevalue name="auth_token" value=""/>
+        <preferencevalue name="resource" value="%(params.resource)" readonly="true"/>
+        <preferencevalue name="limit_rows" value="100" readonly="true"/>
+      </operator>
+      <operator id="0" name="ckan-graph-creator-operator" vendor="CoNWeT" version="1.0.3">
+        <preferencevalue name="graph_series" value="%(params.graph_series)" readonly="true"/>
+        <preferencevalue name="graph_fields" value="%(params.graph_fields)" readonly="true"/>
+        <preferencevalue name="graph_type" value="%(params.graph_type)" readonly="true"/>
+      </operator>
+      <connection>
+        <source endpoint="resource" id="1" type="operator"/>
+        <target endpoint="dataset" id="0" type="operator"/>
+      </connection>
+      <connection>
+        <source endpoint="googlecharts-graph-config" id="0" type="operator"/>
+        <target endpoint="input" id="6" type="widget"/>
+      </connection>
+      <visualdescription>
+        <component id="1" type="operator">
+          <position x="78" y="113"/>
+          <sources>
+            <endpoint>resource</endpoint>
+          </sources>
+          <targets/>
+        </component>
+        <component id="0" type="operator">
+          <position x="370" y="101"/>
+          <sources>
+            <endpoint>googlecharts-graph-config</endpoint>
+          </sources>
+          <targets>
+            <endpoint>dataset</endpoint>
+          </targets>
+        </component>
+        <component id="6" type="widget">
+          <position x="813" y="98"/>
+          <sources/>
+          <targets>
+            <endpoint>input</endpoint>
+          </targets>
+        </component>
+        <connection sourcename="operator/0/googlecharts-graph-config" targetname="widget/6/input"/>
+        <connection sourcename="operator/1/resource" targetname="operator/0/dataset"/>
+      </visualdescription>
+    </wiring>
+  </structure>
+</mashup>
