@@ -1,0 +1,1 @@
+This mashup allows you to browse all the datasets found in a given [CKAN](http://ckan.org/) portal (although it is configured to use the FIWARE Lab global instance of CKAN by default: `https://data.lab.fiware.org`)
