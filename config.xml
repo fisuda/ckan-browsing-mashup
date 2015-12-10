@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<mashup xmlns="http://wirecloud.conwet.fi.upm.es/ns/macdescription/1" vendor="CoNWeT" name="ckan-browsing" version="1.3">
+<mashup xmlns="http://wirecloud.conwet.fi.upm.es/ns/macdescription/1" vendor="CoNWeT" name="ckan-browsing" version="1.4">
   <details>
     <email>wirecloud@conwet.com</email>
     <title>CKAN Browsing</title>
@@ -26,14 +26,14 @@
         <position x="0" y="30" z="1"/>
         <rendering height="31" width="11" layout="0" minimized="true" fulldragboard="true"/>
       </resource>
-      <resource id="56" name="ckan-resource-selector" title="CKAN Resource Selector" vendor="CoNWeT" version="1.0.4">
+      <resource id="56" name="ckan-resource-selector" title="CKAN Resource Selector" vendor="CoNWeT" version="1.0.5">
         <position x="0" y="0" z="3"/>
         <rendering height="30" width="7" layout="0" minimized="true" fulldragboard="true"/>
         <preferencevalue name="limit_rows" value="100"/>
         <preferencevalue name="auth_token"/>
         <preferencevalue name="ckan_server" value="https://data.lab.fiware.org"/>
       </resource>
-      <resource id="57" name="ckan-graph-creator" title="CKAN Graph creator" vendor="CoNWeT" version="1.0.3">
+      <resource id="57" name="ckan-graph-creator" title="CKAN Graph creator" vendor="CoNWeT" version="1.0.4">
         <position x="7" y="0" z="4"/>
         <rendering height="30" width="6" layout="0" minimized="true" fulldragboard="true"/>
       </resource>
@@ -117,16 +117,16 @@
   <embedded>
     <resource name="data-viewer-table" src="macs/CoNWeT_data-viewer-table_2.0.0.wgt" vendor="CoNWeT" version="2.0.0"/>
     <resource name="map-viewer" src="macs/CoNWeT_map-viewer_2.5.7.wgt" vendor="CoNWeT" version="2.5.7"/>
-    <resource name="ckan-graph-creator" src="macs/CoNWeT_ckan-graph-creator_1.0.3.wgt" vendor="CoNWeT" version="1.0.3"/>
+    <resource name="ckan-graph-creator" src="macs/CoNWeT_ckan-graph-creator_1.0.4.wgt" vendor="CoNWeT" version="1.0.4"/>
 
     <resource name="ckan2poi" src="macs/CoNWeT_ckan2poi_1.0.1.wgt" vendor="CoNWeT" version="1.0.1"/>
     <resource name="googlecharts" src="macs/CoNWeT_googlecharts_1.0.2.wgt" vendor="CoNWeT" version="1.0.2"/>
     <resource name="flotr2-graph" src="macs/CoNWeT_flotr2-graph-widget_1.0.0.wgt" vendor="CoNWeT" version="1.0.0"/>
-    <resource name="ckan-resource-selector" src="macs/CoNWeT_ckan-resource-selector_1.0.4.wgt" vendor="CoNWeT" version="1.0.4"/>
+    <resource name="ckan-resource-selector" src="macs/CoNWeT_ckan-resource-selector_1.0.5.wgt" vendor="CoNWeT" version="1.0.5"/>
 
     <!-- Need to create workspaces -->
     <resource name="ckan-graph-creator-operator" src="macs/CoNWeT_ckan-graph-creator_operator_1.0.3.wgt" vendor="CoNWeT" version="1.0.3"/>
-    <resource name="ckan-source" src="macs/CoNWeT_ckan-source_0.4.3.wgt" vendor="CoNWeT" version="0.4.3"/>
+    <resource name="ckan-source" src="macs/CoNWeT_ckan-source_0.4.4.wgt" vendor="CoNWeT" version="0.4.4"/>
     <resource name="ckan-wirecloud-view-flotr2" src="macs/flotr2.wgt" vendor="CoNWeT" version="1.0.1"/>
     <resource name="ckan-wirecloud-view-google" src="macs/google.wgt" vendor="CoNWeT" version="1.0.1"/>
 

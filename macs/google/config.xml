@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mashup xmlns="http://wirecloud.conwet.fi.upm.es/ns/macdescription/1" vendor="CoNWeT" name="CKAN Wirecloud Google View" version="1.0.1">
+<mashup xmlns="http://wirecloud.conwet.fi.upm.es/ns/macdescription/1" vendor="CoNWeT" name="CKAN Wirecloud Google View" version="1.0.2">
   <details>
     <email>conwet@conwet.com</email>
     <description>Template for generating workspaces for Wirecloud View CKAN extension.</description>
@@ -14,13 +14,13 @@
   </preferences>
   <structure>
     <tab id="0" name="Tab">
-      <resource id="6" name="googlecharts" title="Google Charts" vendor="CoNWeT" version="1.0.6">
+      <resource id="6" name="googlecharts" title="Google Charts" vendor="CoNWeT" version="1.0.2">
         <position x="0" y="0" z="0"/>
         <rendering height="36" width="10" layout="0" minimized="false" fulldragboard="false"/>
       </resource>
     </tab>
     <wiring version="2.0">
-      <operator id="1" name="ckan-source" vendor="CoNWeT" version="0.4.3">
+      <operator id="1" name="ckan-source" vendor="CoNWeT" version="0.4.4">
         <preferencevalue name="ckan_server" value="%(params.ckan_server)" readonly="true"/>
         <preferencevalue name="auth_token" value=""/>
         <preferencevalue name="resource" value="%(params.resource)" readonly="true"/>
