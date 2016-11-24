@@ -24,7 +24,7 @@
         <preferencevalue name="resource" value="%(params.resource)" readonly="true"/>
         <preferencevalue name="limit_rows" value="100" readonly="true"/>
       </operator>
-      <operator id="0" name="ckan-graph-creator-operator" vendor="CoNWeT" version="1.0.4">
+      <operator id="0" name="ckan-graph-creator-operator" vendor="CoNWeT" version="1.1.0">
         <preferencevalue name="configuration" value="%(params.configuration)" readonly="true"/>
       </operator>
       <connection>
