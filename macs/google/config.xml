@@ -6,9 +6,7 @@
     <authors>admin</authors>
   </details>
   <preferences>
-    <preference name="graph_type" type="text" label="graph_type"/>
-    <preference name="graph_series" type="text" label="graph_series"/>
-    <preference name="graph_fields" type="text" label="graph_fields"/>
+    <preference name="configuration" type="text" label="configuration"/>
     <preference name="resource" type="text" label="resource"/>
     <preference name="ckan_server" type="text" label="ckan_server"/>
   </preferences>
@@ -26,10 +24,8 @@
         <preferencevalue name="resource" value="%(params.resource)" readonly="true"/>
         <preferencevalue name="limit_rows" value="100" readonly="true"/>
       </operator>
-      <operator id="0" name="ckan-graph-creator-operator" vendor="CoNWeT" version="1.0.3">
-        <preferencevalue name="graph_series" value="%(params.graph_series)" readonly="true"/>
-        <preferencevalue name="graph_fields" value="%(params.graph_fields)" readonly="true"/>
-        <preferencevalue name="graph_type" value="%(params.graph_type)" readonly="true"/>
+      <operator id="0" name="ckan-graph-creator-operator" vendor="CoNWeT" version="1.0.4">
+        <preferencevalue name="configuration" value="%(params.configuration)" readonly="true"/>
       </operator>
       <connection>
         <source endpoint="resource" id="1" type="operator"/>
