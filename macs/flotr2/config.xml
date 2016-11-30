@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mashup xmlns="http://wirecloud.conwet.fi.upm.es/ns/macdescription/1" vendor="CoNWeT" name="CKAN Wirecloud flotr2 view" version="1.0.2">
+<mashup xmlns="http://wirecloud.conwet.fi.upm.es/ns/macdescription/1" vendor="CoNWeT" name="ckan-flotr2-view" version="1.0.4">
   <details>
+    <title>CKAN Flotr2 View</title>
+    <image>images/flotr2-view.png</image>
     <email>conwet@conwet.com</email>
     <description>Template for generating workspaces for Wirecloud View CKAN extension.</description>
     <authors>admin</authors>
@@ -11,14 +13,15 @@
     <preference name="ckan_server" type="text" label="ckan_server"/>
   </preferences>
   <structure>
+    <preferencevalue name="baselayout" value="{&quot;verticalmargin&quot;:3,&quot;smart&quot;:&quot;false&quot;,&quot;horizontalmargin&quot;:4,&quot;type&quot;:&quot;gridlayout&quot;,&quot;columns&quot;:20,&quot;rows&quot;:12}"/>
     <tab id="0" name="Tab">
       <resource id="6" name="flotr2-graph" title="Flotr2 Graph" vendor="CoNWeT" version="1.0.0">
         <position x="0" y="0" z="0"/>
-        <rendering height="36" width="9" layout="0" minimized="false" fulldragboard="false"/>
+        <rendering height="12" width="20" layout="0"/>
       </resource>
     </tab>
     <wiring version="2.0">
-      <operator id="1" name="ckan-source" vendor="CoNWeT" version="0.4.4">
+      <operator id="1" name="ckan-source" vendor="CoNWeT" version="0.4.5">
         <preferencevalue name="ckan_server" value="%(params.ckan_server)" readonly="true"/>
         <preferencevalue name="auth_token" value=""/>
         <preferencevalue name="resource" value="%(params.resource)" readonly="true"/>
